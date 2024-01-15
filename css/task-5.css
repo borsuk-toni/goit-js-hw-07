@@ -1,0 +1,27 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2E2F42;
+}
+
+button.change-color {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #4e75ff;
+    margin-top: 8px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.widget {
+    padding: 100px 88px;
+}
