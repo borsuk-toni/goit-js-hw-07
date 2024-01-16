@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 const textInput = document.querySelector('#name-input');
 const output = document.querySelector('#name-output');
 
-textInput.addEventListener('input', (event) => {
+textInput.addEventListener('input', () => {
     const clearedInput = textInput.value.trim();
-    output.textContent = clearedInput === '' ? 'Anonymous' : event.currentTarget.value;
+    output.textContent = clearedInput === '' ? 'Anonymous' : clearedInput;
 });

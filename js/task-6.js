@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -11,7 +11,7 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const renderedBoxes = document.querySelector('#boxes');
 
-createBtn.addEventListener("click", () => {
+createBtn.addEventListener('click', () => {
   const amount = Number(numberInput.value);
   if (amount >= 1 && amount <= 100) {
     onCreateBoxesClick(amount);

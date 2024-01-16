@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const images = [
   {
@@ -32,17 +32,15 @@ const images = [
 
 const galleryList = document.querySelector('.gallery');
 
-images.forEach(image => {
-  const listItem = document.createElement('li');
-  listItem.classList.add('gallery-item');
-
-  const listImage = document.createElement('img');
-  listImage.classList.add('gallery-image');
-  listImage.src = image.url;
-  listImage.alt = image.alt;
-  listImage.setAttribute('width', '360px');
-  listImage.setAttribute('height', '300px');
+function galleryTemplate() {
+  const markup = images
+    .map(image => {
+      return `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"/></li>`;
+    })
+    .join('');
   
-  listItem.append(listImage);
-  galleryList.append(listItem);
-});
+  return markup;
+}
+
+const markup = galleryTemplate();
+galleryList.insertAdjacentHTML('afterbegin', markup);
